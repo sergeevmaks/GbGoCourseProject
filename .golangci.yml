@@ -1,0 +1,21 @@
+run:
+  concurrency: 4
+  timeout: 1m
+  issues-exit-code: 1
+  tests: true
+
+disable-all: true
+enable:
+  - govet
+  - errcheck
+  - golint
+  - gocritic
+  - gofmt
+linters-settings:
+  revive:
+    ignore-generated-header: false
+    severity: error
+    confidence: 0.8
+    error-code: -1
+    warning-code: -1
+
